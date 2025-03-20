@@ -5,19 +5,66 @@
   text-align: center;
 }
 
+/* Logo Styling */
 .logo {
   height: 6em;
   padding: 1.5em;
   will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  transition: filter 300ms, transform 300ms;
 }
 
+.logo:hover {
+  filter: drop-shadow(0 0 10px #646cff);
+  transform: scale(1.1);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 10px #61dafb);
+}
+
+/* Card Styling */
+.card {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  width: 260px;
+  margin: 10px;
+  text-align: center;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 300ms ease, box-shadow 300ms ease;
+  background: linear-gradient(to bottom, #ffffff, #f7f7f7);
+  color: #222;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Styling */
+.image {
+  width: 100%;
+  border-radius: 10px;
+  height: auto;
+  max-height: 200px;
+  object-fit: cover;
+  transition: transform 300ms ease;
+}
+
+.image:hover {
+  transform: scale(1.05);
+}
+
+/* Container Layout */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Spinning Animation */
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -27,16 +74,15 @@
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
+/* Read The Docs Styling */
 .read-the-docs {
-  color: #888;
+  color: #555;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: color 300ms ease;
+}
+
+.read-the-docs:hover {
+  color: #222;
+  text-decoration: underline;
 }
